@@ -798,8 +798,6 @@ def manage_bookings():
     
     refresh_bookings()
     
-    Button(bookings_window, text="Обновить", command=lambda: [widget.destroy() for widget in bookings_window.winfo_children()] + [refresh_bookings()], 
-           bg='lightgreen').pack(pady=5)
     Button(bookings_window, text="Назад", command=bookings_window.destroy, bg='lightcoral').pack(pady=5)
 
 # Основное окно авторизации
@@ -826,5 +824,6 @@ Button(root, text="Регистрация", command=register_user, bg='lightgree
 
 label_status = Label(root, text="Введите данные для входа", fg='black', bg='lightblue')
 label_status.pack(pady=10)
+
 
 root.mainloop()
